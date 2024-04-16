@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "contatos.h"
 
 int main(){
