@@ -1,0 +1,18 @@
+nome               Digite seu Nome
+sobrenome          Digite seu Sobrenome
+telefone  11       Digite seu Telefone
+email              Digite seu Email
+
+
+
+
+max 255 contatos
+Listar todos contados 
+Deletar contato escolhido usando o número de telefone
+Salvar agenda em arquivo binário
+Carregar agenda do arquivo binário
+
+Digite seu nome
+
+
+readme.md
