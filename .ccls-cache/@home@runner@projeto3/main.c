@@ -15,8 +15,8 @@ int main(){
   do{
       printf("\nMenu principal\n");
       printf("1 - Criar Contato\n");
-      printf("2 - Deletar Contato\n");
-      printf("3 - Listar Contatos\n");
+      printf("2 - Listar Contatos\n");
+      printf("3 - Deletar Contato\n");
       printf("0 - Sair\n");
       printf("Escolha uma opcao: ");
     scanf("%d", &opcao);

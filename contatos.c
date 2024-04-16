@@ -10,15 +10,15 @@ ERROS criar(Agenda contatos[], int *pos) {
   fgets(contatos[*pos].nome, NOME, stdin);
   contatos[*pos].nome[strcspn(contatos[*pos].nome, "\n")] = '\0';
 
-  printf("Digite o sobrenome: ");
+  printf("Digite o sobrenome: ");//Sobrenome
   fgets(contatos[*pos].sobrenome, SOBRENOME, stdin);
   contatos[*pos].sobrenome[strcspn(contatos[*pos].sobrenome, "\n")] = '\0';
 
-  printf("Digite seu Telefone: ");
+  printf("Digite seu Telefone: ");//Telefone
   fgets(contatos[*pos].telefone, TELEFONE, stdin);
   contatos[*pos].telefone[strcspn(contatos[*pos].telefone, "\n")] = '\0';
 
-  printf("Digite seu Email: ");
+  printf("Digite seu Email: "); //Email
   fgets(contatos[*pos].email, EMAIL, stdin);
   contatos[*pos].email[strcspn(contatos[*pos].email, "\n")] = '\0';
 
