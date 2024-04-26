@@ -3,7 +3,7 @@
 #include "contatos.h"
 
 int main(){
-  funcao fs[] = {criar, deletar, listar, salvar, carregar};
+  funcao fs[] = {criar,listar, deletar , salvar, carregar};
 
   Agenda contatos[TOTAL];
   int pos;
@@ -17,11 +17,13 @@ int main(){
       printf("1 - Criar Contato\n");
       printf("2 - Listar Contatos\n");
       printf("3 - Deletar Contato\n");
+      printf("4 - Salvar Contatos\n");
       printf("0 - Sair\n");
       printf("Escolha uma opcao: ");
     scanf("%d", &opcao);
+    clearBuffer();
     opcao--;
-    if(opcao > 2)
+    if(opcao > 4)
         printf("Opcao invalida\n");
     else if(opcao >= 0)
         fs[opcao](contatos, &pos);
