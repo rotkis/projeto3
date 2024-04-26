@@ -19,6 +19,7 @@ ERROS criar(Agenda contatos[], int *pos);
 ERROS deletar(Agenda contatos[], int *pos);
 ERROS listar(Agenda contatos[], int *pos);
 ERROS salvar(Agenda contatos[], int *pos);
+
 ERROS carregar(Agenda contatos[], int *pos);
 
 void clearBuffer();
