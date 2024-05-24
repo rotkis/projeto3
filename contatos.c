@@ -2,6 +2,18 @@
 #include <stdio.h>
 #include <string.h>
 
+Contato pessoais[MAX_CONTATOS];
+Contato trabalho[MAX_CONTATOS];
+
+int validaremail(const char *email) {
+    const char *arroba = strchr(email, '@'); // roda e procrora se tem @ no email
+    if (!arroba) return 0;
+    const char *ponto = strrchr(arroba, '.'); // ve se tem .         se tiver os dois é considerado email
+    if (!ponto || ponto == arroba + 1 || ponto[1] == '\0') return 0;
+    return 1;
+}
+
+
 ERROS criar(Agenda contatos[], int *pos) {
   if (*pos >= TOTAL)
     return MAX_CONTATO;

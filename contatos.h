@@ -22,4 +22,7 @@ ERROS salvar(Agenda contatos[], int *pos);
 
 ERROS carregar(Agenda contatos[], int *pos);
 
+
+int validaremail(const char *email);
+
 void clearBuffer();
