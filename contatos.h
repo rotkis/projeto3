@@ -3,13 +3,14 @@
 #define SOBRENOME 25
 #define TELEFONE 11
 #define EMAIL 50
+#define MAX_CONTATOS 255
 
 typedef struct {
     char nome[NOME];
     char sobrenome[SOBRENOME];
     char telefone[TELEFONE];
     char email[EMAIL];
-} Agenda;
+}Agenda;
 
 typedef enum {OK, MAX_CONTATO, SEM_CONTATO, NAO_ENCONTRADO, ABRIR, FECHAR, ESCREVER, LER} ERROS;
 
