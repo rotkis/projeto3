@@ -2,6 +2,17 @@
 #include <stdio.h>
 #include <string.h>
 
+
+
+int validaremail(const char *email) {
+    const char *arroba = strchr(email, '@'); // roda e procrora se tem @ no email
+    if (!arroba) return 0;
+    const char *ponto = strrchr(arroba, '.'); // ve se tem .         se tiver os dois é considerado email
+    if (!ponto || ponto == arroba + 1 || ponto[1] == '\0') return 0;
+    return 1;
+}
+
+
 ERROS criar(Agenda contatos[], int *pos) {
   if (*pos >= TOTAL)
     return MAX_CONTATO;
@@ -17,10 +28,19 @@ ERROS criar(Agenda contatos[], int *pos) {
   printf("Digite seu Telefone(11 caracteres no maximo): "); // Telefone
   fgets(contatos[*pos].telefone, TELEFONE, stdin);
   contatos[*pos].telefone[strcspn(contatos[*pos].telefone, "\n")] = '\0';
+  while(1){
 
   printf("Digite seu Email(11 caracteres no maximo): "); // Email
   fgets(contatos[*pos].email, EMAIL, stdin);
   contatos[*pos].email[strcspn(contatos[*pos].email, "\n")] = '\0';
+    const char *arroba = strchr(contatos[*pos].email, '@'); // roda e procrora se tem @ no email
+    if (!arroba) continue;
+    const char *ponto = strrchr(arroba, '.'); // ve se tem .         se tiver os dois é considerado email
+    if (!ponto || ponto == arroba + 1 || ponto[1] == '\0') continue;
+    
+  break;
+  }
+  
 
   *pos = *pos + 1;
   return OK;
